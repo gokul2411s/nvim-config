@@ -12,7 +12,7 @@
 	url = https://github.com/rking/ag.vim
 [submodule "dein/repos/github.com/sbdchd/neoformat"]
 	path = dein/repos/github.com/sbdchd/neoformat
-	url = https://github.com/sbdchdi/neoformat
+	url = https://github.com/sbdchd/neoformat
 [submodule "dein/repos/github.com/Shougo/deoplete.nvim"]
 	path = dein/repos/github.com/Shougo/deoplete.nvim
 	url = https://github.com/Shougo/deoplete.nvim
