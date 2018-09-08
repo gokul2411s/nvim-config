@@ -55,7 +55,13 @@ endif
 " We want Deocomplete auto-completion enabled by default.
 let g:deoplete#enable_at_startup = 1
 
-" Enable auto format using Neoformat.
+" Setup Neoformat for Java.
+let g:neoformat_java_google = {
+            \ 'exe': 'sh',
+            \ 'args': ['$XDG_CONFIG_HOME/google_formatter/google-java-format-1.6-all-deps.sh'],
+            \ 'stdin': 1, 
+            \ }
+let g:neoformat_enabled_java = ['google']
 autocmd BufWritePre,InsertLeave Filetype java Neoformat google
 
 " Required:
