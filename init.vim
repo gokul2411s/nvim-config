@@ -29,6 +29,11 @@ if dein#load_state('$XDG_CONFIG_HOME/dein')
   " For programming use cases, we use eclim.
   call dein#add('Shougo/deoplete.nvim')
   
+  " Context-aware tab completion.
+  " Use case 1: Auto-complete with tab in a context-sensitive manner using the
+  "             current auto-completion engine.
+  call dein#add('ervandew/supertab')
+
   " Formatting code.
   " Use case 1: Auto-format on file save or leaving insert mode while
   "             programming.
@@ -59,6 +64,9 @@ endif
 " Enable deocomplete where applicable.
 let g:deoplete#enable_at_startup = 1
 autocmd FileType java call deoplete#custom#buffer_option('auto_complete', v:false)
+
+" Enable context-sensitive tab completion.
+let g:SuperTabDefaultCompletionType = 'context'
 
 " Setup Neoformat for Java.
 let g:neoformat_java_google = {
@@ -96,3 +104,4 @@ tnoremap <Esc> <C-\><C-n>
 
 " Changing directories within editor.
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
