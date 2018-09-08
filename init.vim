@@ -94,3 +94,5 @@ autocmd Filetype vim setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 " Making it easier to get out of a native terminal emulator in nvim.
 tnoremap <Esc> <C-\><C-n>
 
+" Changing directories within editor.
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
