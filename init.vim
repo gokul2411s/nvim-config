@@ -21,6 +21,8 @@ if dein#load_state('$XDG_CONFIG_HOME/nvim/dein')
   "             configuration, text files and the like.
   " Use case 2: Auto-complete with context-sensitive options while
   "             programming.
+  " Use case 3: Auto-complete file paths in local file system while
+  "             editing.
   call dein#add('Shougo/deoplete.nvim')
   
   " Formatting code.
