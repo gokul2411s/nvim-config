@@ -24,10 +24,9 @@ if dein#load_state('$XDG_CONFIG_HOME/dein')
   " Auto-completion.
   " Use case 1: Auto-complete with words already used in file for
   "             configuration, text files and the like.
-  " Use case 2: Auto-complete with context-sensitive options while
-  "             programming.
-  " Use case 3: Auto-complete file paths in local file system while
+  " Use case 2: Auto-complete file paths in local file system while
   "             editing.
+  " For programming use cases, we use eclim.
   call dein#add('Shougo/deoplete.nvim')
   
   " Formatting code.
@@ -57,8 +56,9 @@ if dein#load_state('$XDG_CONFIG_HOME/dein')
   call dein#save_state()
 endif
 
-" We want Deocomplete auto-completion enabled by default.
+" Enable deocomplete where applicable.
 let g:deoplete#enable_at_startup = 1
+autocmd FileType java call deoplete#custom#buffer_option('auto_complete', v:false)
 
 " Setup Neoformat for Java.
 let g:neoformat_java_google = {
