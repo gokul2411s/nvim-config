@@ -21,6 +21,12 @@ if dein#load_state('$XDG_CONFIG_HOME/dein')
   " Required:
   call dein#add('$XDG_CONFIG_HOME/dein/repos/github.com/Shougo/dein.vim')
 
+  " Startup screen and sessions.
+  " Use case 1: Show startup screen when running nvim with no files.
+  " Use case 2: Save sessions applicable at a certain directory.
+  " Use case 3: Load saved sessions from startup screen.
+  call dein#add('mhinz/vim-startify')
+
   " Auto-completion.
   " Use case 1: Auto-complete with words already used in file for
   "             configuration, text files and the like.
