@@ -5,6 +5,11 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
+" Ensure we read vim config.
+set runtimepath^=$HOME/.vim runtimepath+=$HOME/.vim/after
+let &packpath = &runtimepath
+source $HOME/.vimrc
+
 " Required:
 set runtimepath+=$XDG_CONFIG_HOME/dein/repos/github.com/Shougo/dein.vim
 
