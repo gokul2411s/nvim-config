@@ -6,15 +6,15 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=$XDG_CONFIG_HOME/nvim/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=$XDG_CONFIG_HOME/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-if dein#load_state('$XDG_CONFIG_HOME/nvim/dein')
-  call dein#begin('$XDG_CONFIG_HOME/nvim/dein')
+if dein#load_state('$XDG_CONFIG_HOME/dein')
+  call dein#begin('$XDG_CONFIG_HOME/dein')
 
   " Let dein manage dein
   " Required:
-  call dein#add('$XDG_CONFIG_HOME/nvim/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('$XDG_CONFIG_HOME/dein/repos/github.com/Shougo/dein.vim')
 
   " Auto-completion.
   " Use case 1: Auto-complete with words already used in file for
