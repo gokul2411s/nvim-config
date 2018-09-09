@@ -47,10 +47,6 @@ if dein#load_state('$XDG_CONFIG_HOME/dein')
   "             languages.
   call dein#add('sbdchd/neoformat')
 
-  " Refactoring code.
-  " TODO: List use cases.
-  call dein#add('apalmer1377/factorus')
-
   " Fuzzy searching files and directories by name.
   " Use case 1: Search for files and directories matching a set of regexes.
   call dein#add('junegunn/fzf')
