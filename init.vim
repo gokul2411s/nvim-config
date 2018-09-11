@@ -88,9 +88,9 @@ if dein#check_install()
   call dein#install()
 endif
 
-" -------------------------
-" Generic vim configuration
-" -------------------------
+" --------------------------
+" Generic vim configuration.
+" --------------------------
 
 " We want to control indentation behavior based on file type.
 " by default, the indent is 4 spaces. 
@@ -106,4 +106,13 @@ tnoremap <Esc> <C-\><C-n>
 
 " Changing directories within editor.
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
+" -------------------------
+" Setup Eclim key bindings.
+" -------------------------
+nnoremap <silent> <LocalLeader>i :JavaImport<cr>
+nnoremap <silent> <LocalLeader>jd :JavaDocSearch -x declarations<cr>
+nnoremap <silent> <LocalLeader><cr> :JavaSearchContext<cr>
+nnoremap <silent> <LocalLeader>jv :Validate<cr>
+nnoremap <silent> <LocalLeader>jc :JavaCorrect<cr>
 
