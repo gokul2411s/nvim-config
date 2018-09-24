@@ -116,3 +116,7 @@ nnoremap <silent> <LocalLeader><cr> :JavaSearchContext<cr>
 nnoremap <silent> <LocalLeader>jv :Validate<cr>
 nnoremap <silent> <LocalLeader>jc :JavaCorrect<cr>
 
+" -------------------------
+" Editing crontabs safely.
+" -------------------------
+autocmd Filetype crontab setlocal nobackup nowritebackup
