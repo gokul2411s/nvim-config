@@ -100,7 +100,7 @@ set tabstop=4
 set expandtab
 
 autocmd BufNewFile,BufRead build.xml setf ant
-autocmd Filetype ant,sh,vim setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd Filetype ant,sh,vim,json setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
 " Making it easier to get out of a native terminal emulator in nvim.
 tnoremap <Esc> <C-\><C-n>
