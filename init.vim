@@ -57,7 +57,10 @@ if dein#load_state('$XDG_CONFIG_HOME/dein')
   " Use case 3: Open one of the found files.
   " Use case 4: Return back to the search results.
   call dein#add('rking/ag.vim')
-  
+
+  " Color schemes.
+  call dein#add('altercation/vim-colors-solarized')
+
   " Required:
   call dein#end()
   call dein#save_state()
@@ -121,3 +124,10 @@ nnoremap <silent> <LocalLeader>jc :JavaCorrect<cr>
 " Editing crontabs safely.
 " -------------------------
 autocmd Filetype crontab setlocal nobackup nowritebackup
+
+" -------------------------
+" Colorscheme.
+" -------------------------
+set background=dark
+colorscheme solarized
+let g:solarized_diffmode="high"
