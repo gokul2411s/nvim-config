@@ -40,13 +40,6 @@ if dein#load_state('$XDG_CONFIG_HOME/dein')
   "             current auto-completion engine.
   call dein#add('ervandew/supertab')
 
-  " Formatting code.
-  " Use case 1: Auto-format on file save or leaving insert mode while
-  "             programming.
-  " Use case 2: Support different formatters for different programming
-  "             languages.
-  call dein#add('sbdchd/neoformat')
-
   " Fuzzy searching files and directories by name.
   " Use case 1: Search for files and directories matching a set of regexes.
   call dein#add('junegunn/fzf')
@@ -72,15 +65,6 @@ autocmd FileType java call deoplete#custom#buffer_option('auto_complete', v:fals
 
 " Enable context-sensitive tab completion.
 let g:SuperTabDefaultCompletionType = 'context'
-
-" Setup Neoformat for Java.
-let g:neoformat_java_google = {
-            \ 'exe': 'sh',
-            \ 'args': ['$XDG_CONFIG_HOME/google_formatter/google-java-format-1.6-all-deps.sh'],
-            \ 'stdin': 1, 
-            \ }
-let g:neoformat_enabled_java = ['google']
-autocmd BufWritePre,InsertLeave Filetype java Neoformat google
 
 " Required:
 filetype plugin indent on
@@ -109,15 +93,6 @@ tnoremap <Esc> <C-\><C-n>
 
 " Changing directories within editor.
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
-
-" -------------------------
-" Setup Eclim key bindings.
-" -------------------------
-nnoremap <silent> <LocalLeader>i :JavaImport<cr>
-nnoremap <silent> <LocalLeader>jd :JavaDocSearch -x declarations<cr>
-nnoremap <silent> <LocalLeader><cr> :JavaSearchContext<cr>
-nnoremap <silent> <LocalLeader>jv :Validate<cr>
-nnoremap <silent> <LocalLeader>jc :JavaCorrect<cr>
 
 " -------------------------
 " Editing crontabs safely.
